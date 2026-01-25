@@ -103,6 +103,66 @@ your-project/
 | `fix` | Debugging | state, recent sessions |
 | `document` | Documentation | overview, constitution |
 
+## Development Workflow
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   PLAN ──────► BUILD ──────► REVIEW ──────► DOCUMENT            │
+│     │           │              │                                │
+│     │           ▼              │                                │
+│     │         FIX ◄────────────┘                                │
+│     │           │                                               │
+│     └───────────┴──► (repeat for next feature)                  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Typical Flow
+
+1. **Plan** - Start with `/session:start plan`
+   - Design the feature, break down into tasks
+   - Create feature spec: `/session:feature create auth`
+   - Tasks created in beads with dependencies
+
+2. **Build** - Switch to `/session:start build`
+   - Pick a ready task: `bd ready`
+   - Implement, commit, close task: `bd close <id>`
+   - Repeat until feature complete
+
+3. **Review** - Run `/session:start review`
+   - Check code against conventions
+   - Verify acceptance criteria
+   - Note issues for fix session if needed
+
+4. **Fix** - If issues found: `/session:start fix`
+   - Debug and resolve
+   - Return to review when fixed
+
+5. **Document** - Wrap up with `/session:start document`
+   - Update README, API docs
+   - Mark feature complete: `/session:feature complete auth`
+
+### Session Lifecycle
+
+```
+/session:start <type>    Start focused work
+       │
+       ▼
+    [work]               Context pulled as needed
+       │
+       ▼
+/session:end             Capture state, update continuation
+       │
+       ▼
+   [new chat]            /session:handoff if needed
+       │
+       ▼
+/session:start           Continue where you left off
+```
+
+Each session is self-contained. State persists via `.context/continuation.md` and beads tasks.
+
 ## Context Philosophy
 
 **Load orientation, not information.**
