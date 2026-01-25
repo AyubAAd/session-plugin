@@ -1,0 +1,43 @@
+# Tech Stack
+
+## Core
+
+| Component | Technology | Version |
+|-----------|------------|---------|
+| Language | {{LANGUAGE}} | {{LANGUAGE_VERSION}} |
+| Framework | {{FRAMEWORK}} | {{FRAMEWORK_VERSION}} |
+| Database | {{DATABASE}} | {{DATABASE_VERSION}} |
+| Runtime | {{RUNTIME}} | {{RUNTIME_VERSION}} |
+
+## Key Dependencies
+
+| Dependency | Purpose | Notes |
+|------------|---------|-------|
+| {{DEPENDENCY_1}} | {{PURPOSE_1}} | {{NOTES_1}} |
+| {{DEPENDENCY_2}} | {{PURPOSE_2}} | {{NOTES_2}} |
+| {{DEPENDENCY_3}} | {{PURPOSE_3}} | {{NOTES_3}} |
+
+## Infrastructure
+
+| Service | Provider | Environment |
+|---------|----------|-------------|
+| Hosting | {{HOSTING_PROVIDER}} | {{HOSTING_ENV}} |
+| CI/CD | {{CI_CD_PROVIDER}} | {{CI_CD_ENV}} |
+| Monitoring | {{MONITORING_PROVIDER}} | {{MONITORING_ENV}} |
+
+## Development Tools
+
+- Package manager: {{PACKAGE_MANAGER}}
+- Linter: {{LINTER}}
+- Formatter: {{FORMATTER}}
+- Test runner: {{TEST_RUNNER}}
+
+## Environment Variables
+
+| Variable | Purpose | Required |
+|----------|---------|----------|
+| {{ENV_VAR_1}} | {{ENV_PURPOSE_1}} | {{ENV_REQUIRED_1}} |
+| {{ENV_VAR_2}} | {{ENV_PURPOSE_2}} | {{ENV_REQUIRED_2}} |
+
+---
+*Last updated: {{UPDATED_DATE}}*

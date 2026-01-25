@@ -1,0 +1,83 @@
+# Conventions
+
+## Code Style
+
+### General Rules
+
+- {{STYLE_RULE_1}}
+- {{STYLE_RULE_2}}
+- {{STYLE_RULE_3}}
+
+### Key Patterns
+
+- {{PATTERN_1}}
+- {{PATTERN_2}}
+
+## Naming Conventions
+
+| Element | Convention | Example |
+|---------|------------|---------|
+| Files | {{FILE_NAMING}} | {{FILE_EXAMPLE}} |
+| Components | {{COMPONENT_NAMING}} | {{COMPONENT_EXAMPLE}} |
+| Functions | {{FUNCTION_NAMING}} | {{FUNCTION_EXAMPLE}} |
+| Variables | {{VARIABLE_NAMING}} | {{VARIABLE_EXAMPLE}} |
+| Constants | {{CONSTANT_NAMING}} | {{CONSTANT_EXAMPLE}} |
+
+## Directory Structure
+
+```
+{{DIRECTORY_STRUCTURE}}
+```
+
+## Git Workflow
+
+### Branch Naming
+
+- Feature: `{{FEATURE_BRANCH_PATTERN}}`
+- Bug fix: `{{BUGFIX_BRANCH_PATTERN}}`
+- Hotfix: `{{HOTFIX_BRANCH_PATTERN}}`
+
+### Commit Format
+
+```
+{{COMMIT_FORMAT}}
+```
+
+Example:
+```
+{{COMMIT_EXAMPLE}}
+```
+
+### PR Process
+
+1. {{PR_STEP_1}}
+2. {{PR_STEP_2}}
+3. {{PR_STEP_3}}
+
+## Testing
+
+### Unit Tests
+
+- Location: `{{UNIT_TEST_LOCATION}}`
+- Naming: `{{UNIT_TEST_NAMING}}`
+- Run: `{{UNIT_TEST_COMMAND}}`
+
+### Integration Tests
+
+- Location: `{{INTEGRATION_TEST_LOCATION}}`
+- Naming: `{{INTEGRATION_TEST_NAMING}}`
+- Run: `{{INTEGRATION_TEST_COMMAND}}`
+
+### Test Coverage
+
+- Minimum: {{MIN_COVERAGE}}%
+- Report: `{{COVERAGE_COMMAND}}`
+
+## Documentation
+
+- Code comments: {{COMMENT_STYLE}}
+- API docs: {{API_DOC_STYLE}}
+- README updates: {{README_POLICY}}
+
+---
+*Last updated: {{UPDATED_DATE}}*

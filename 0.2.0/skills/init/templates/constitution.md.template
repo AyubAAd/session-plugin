@@ -1,0 +1,43 @@
+# Constitution
+
+## Principles
+
+These are non-negotiable values that guide all decisions:
+
+- {{PRINCIPLE_1}}
+- {{PRINCIPLE_2}}
+- {{PRINCIPLE_3}}
+
+## Non-Goals
+
+What we explicitly will NOT build or support:
+
+- {{NON_GOAL_1}}
+- {{NON_GOAL_2}}
+
+## Constraints
+
+### Technical Constraints
+
+- {{TECHNICAL_CONSTRAINT_1}}
+- {{TECHNICAL_CONSTRAINT_2}}
+
+### Business Constraints
+
+- {{BUSINESS_CONSTRAINT_1}}
+- {{BUSINESS_CONSTRAINT_2}}
+
+## Guardrails
+
+### Quality Standards
+
+- {{QUALITY_STANDARD_1}}
+- {{QUALITY_STANDARD_2}}
+
+### Security Requirements
+
+- {{SECURITY_REQUIREMENT_1}}
+- {{SECURITY_REQUIREMENT_2}}
+
+---
+*This document should change rarely. If principles need updating, discuss first.*

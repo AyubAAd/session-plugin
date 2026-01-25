@@ -1,0 +1,137 @@
+# Plan: {{FEATURE_NAME}}
+
+> **Note**: This plan file is temporary. It will be deleted when the feature is complete.
+> Update spec.md with final implementation details upon completion.
+
+## Summary
+
+**Feature**: [{{FEATURE_NAME}} Specification](./spec.md)
+**Created**: {{CREATED_DATE}}
+**Target**: {{TARGET_DATE}}
+**Status**: {{PLAN_STATUS}} <!-- planning | ready | in-progress | blocked -->
+
+---
+
+## Goal
+
+{{PLAN_GOAL}}
+
+## Current State
+
+{{CURRENT_STATE}}
+
+## Proposed Changes
+
+High-level changes to implement this feature:
+
+1. {{CHANGE_1}}
+2. {{CHANGE_2}}
+3. {{CHANGE_3}}
+
+---
+
+## Implementation Plan
+
+### Phase 1: {{PHASE_1_TITLE}}
+
+**Goal**: {{PHASE_1_GOAL}}
+
+Steps:
+- [ ] {{STEP_1_1}}
+- [ ] {{STEP_1_2}}
+- [ ] {{STEP_1_3}}
+
+Files to modify:
+- `{{FILE_1}}` - {{FILE_1_CHANGES}}
+- `{{FILE_2}}` - {{FILE_2_CHANGES}}
+
+### Phase 2: {{PHASE_2_TITLE}}
+
+**Goal**: {{PHASE_2_GOAL}}
+
+Steps:
+- [ ] {{STEP_2_1}}
+- [ ] {{STEP_2_2}}
+- [ ] {{STEP_2_3}}
+
+Files to modify:
+- `{{FILE_3}}` - {{FILE_3_CHANGES}}
+
+### Phase 3: {{PHASE_3_TITLE}}
+
+**Goal**: {{PHASE_3_GOAL}}
+
+Steps:
+- [ ] {{STEP_3_1}}
+- [ ] {{STEP_3_2}}
+
+---
+
+## Technical Approach
+
+{{TECHNICAL_OVERVIEW}}
+
+### Key Decisions
+
+| Decision | Rationale | Alternatives Considered |
+|----------|-----------|------------------------|
+| {{DECISION_1}} | {{RATIONALE_1}} | {{ALT_1}} |
+| {{DECISION_2}} | {{RATIONALE_2}} | {{ALT_2}} |
+
+---
+
+## Verification
+
+### How to Test
+
+1. {{TEST_STEP_1}}
+2. {{TEST_STEP_2}}
+3. {{TEST_STEP_3}}
+
+### Acceptance Criteria Check
+
+From spec.md:
+- [ ] {{CRITERION_1}}
+- [ ] {{CRITERION_2}}
+- [ ] {{CRITERION_3}}
+
+---
+
+## Risks and Mitigations
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| {{RISK_1}} | {{IMPACT_1}} | {{LIKELIHOOD_1}} | {{MITIGATION_1}} |
+| {{RISK_2}} | {{IMPACT_2}} | {{LIKELIHOOD_2}} | {{MITIGATION_2}} |
+
+---
+
+## Related Tasks
+
+Beads tasks for this feature:
+
+- {{TASK_ID_1}}: {{TASK_DESC_1}}
+- {{TASK_ID_2}}: {{TASK_DESC_2}}
+- {{TASK_ID_3}}: {{TASK_DESC_3}}
+
+## Open Questions
+
+- [ ] {{QUESTION_1}}
+- [ ] {{QUESTION_2}}
+
+---
+
+## Session Log
+
+Track build sessions working on this plan:
+
+| Date | Session | Progress |
+|------|---------|----------|
+| {{SESSION_DATE}} | {{SESSION_ID}} | {{SESSION_PROGRESS}} |
+
+---
+
+**Upon completion**: Delete this file and update spec.md with:
+1. Mark status as "complete"
+2. Fill in "Completion Notes" section
+3. Update technical details with actual implementation

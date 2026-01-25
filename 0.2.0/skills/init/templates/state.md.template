@@ -1,0 +1,39 @@
+# Current State
+
+## Active Focus
+
+{{ACTIVE_FOCUS}}
+
+## Recent Decisions
+
+| Decision | Rationale | Date |
+|----------|-----------|------|
+| {{DECISION_1}} | {{RATIONALE_1}} | {{DATE_1}} |
+| {{DECISION_2}} | {{RATIONALE_2}} | {{DATE_2}} |
+
+## Blockers
+
+- [ ] {{BLOCKER_1}}
+- [ ] {{BLOCKER_2}}
+
+## In Progress
+
+| Task | Status | Owner |
+|------|--------|-------|
+| {{TASK_1}} | {{STATUS_1}} | {{OWNER_1}} |
+| {{TASK_2}} | {{STATUS_2}} | {{OWNER_2}} |
+
+## Next Up
+
+- {{NEXT_TASK_1}}
+- {{NEXT_TASK_2}}
+
+## Recent Sessions
+
+| Date | Type | Summary |
+|------|------|---------|
+| {{SESSION_DATE_1}} | {{SESSION_TYPE_1}} | {{SESSION_SUMMARY_1}} |
+| {{SESSION_DATE_2}} | {{SESSION_TYPE_2}} | {{SESSION_SUMMARY_2}} |
+
+---
+*Last updated: {{UPDATED_DATE}} by {{SESSION_TYPE}} session*

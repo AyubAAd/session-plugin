@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Context (local memory, not tracked)
+.context/
+
+# Editor
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/

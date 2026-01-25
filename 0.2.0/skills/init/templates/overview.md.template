@@ -1,0 +1,35 @@
+# Project Overview
+
+## What is this?
+
+{{PROJECT_DESCRIPTION}}
+
+## Who is it for?
+
+{{TARGET_USERS}}
+
+## Key Features
+
+- {{FEATURE_1}}
+- {{FEATURE_2}}
+- {{FEATURE_3}}
+
+## Quick Start
+
+```bash
+{{QUICK_START_COMMANDS}}
+```
+
+## Project Structure
+
+```
+{{PROJECT_STRUCTURE}}
+```
+
+## Current Status
+
+{{PROJECT_STATUS}}
+
+---
+*Created: {{CREATED_DATE}}*
+*Last updated: {{UPDATED_DATE}}*

@@ -1,0 +1,104 @@
+# {{FEATURE_NAME}} Specification
+
+## Status
+
+**State**: {{STATUS}}  <!-- draft | in-progress | complete -->
+**Created**: {{CREATED_DATE}}
+**Last updated**: {{UPDATED_DATE}}
+
+---
+
+## Overview
+
+{{FEATURE_OVERVIEW}}
+
+## Goals
+
+What this feature aims to achieve:
+
+- {{GOAL_1}}
+- {{GOAL_2}}
+- {{GOAL_3}}
+
+## Non-Goals
+
+What this feature explicitly will NOT do:
+
+- {{NON_GOAL_1}}
+- {{NON_GOAL_2}}
+
+## Requirements
+
+### Functional Requirements
+
+- [ ] {{REQ_1}}
+- [ ] {{REQ_2}}
+- [ ] {{REQ_3}}
+
+### Non-Functional Requirements
+
+- [ ] {{NFR_1}} (e.g., performance, security, accessibility)
+- [ ] {{NFR_2}}
+
+## User Stories
+
+- As a {{USER_TYPE_1}}, I can {{ACTION_1}} so that {{BENEFIT_1}}
+- As a {{USER_TYPE_2}}, I can {{ACTION_2}} so that {{BENEFIT_2}}
+
+## Acceptance Criteria
+
+The feature is complete when:
+
+- [ ] {{CRITERION_1}}
+- [ ] {{CRITERION_2}}
+- [ ] {{CRITERION_3}}
+- [ ] {{CRITERION_4}}
+
+## Technical Details
+
+### Architecture
+
+{{ARCHITECTURE_NOTES}}
+
+### Data Model
+
+```{{LANGUAGE}}
+{{DATA_MODEL}}
+```
+
+### API / Interfaces
+
+| Method | Path | Description |
+|--------|------|-------------|
+| {{METHOD_1}} | {{PATH_1}} | {{ENDPOINT_DESC_1}} |
+
+### Dependencies
+
+- Internal: {{INTERNAL_DEPENDENCIES}}
+- External: {{EXTERNAL_DEPENDENCIES}}
+
+## Constraints
+
+- {{CONSTRAINT_1}}
+- {{CONSTRAINT_2}}
+
+## Known Issues / Risks
+
+- {{ISSUE_1}}
+- {{ISSUE_2}}
+
+## Related
+
+- Plan: [plan.md](./plan.md) (if in progress)
+- Tasks: {{RELATED_TASKS}}
+- Docs: {{RELATED_DOCS}}
+
+---
+
+## Completion Notes
+
+<!-- Filled in when feature is marked complete -->
+
+**Completed**: {{COMPLETION_DATE}}
+**Summary**: {{COMPLETION_SUMMARY}}
+**Lessons learned**: {{LESSONS_LEARNED}}
