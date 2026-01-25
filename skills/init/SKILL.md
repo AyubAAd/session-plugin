@@ -1,215 +1,213 @@
 ---
-description: Initialize session workflow structure for a project
+description: Initialize session workflow structure with auto-detection. Analyzes codebase to pre-fill project templates (stack, conventions, structure).
 ---
 
 # session:init
 
-Initialize the session workflow structure for a project, creating the three pillars: KNOWLEDGE (.project/), TASKS (.beads/), and MEMORY (.context/).
+Initialize session workflow with automatic project analysis. Creates three pillars (KNOWLEDGE, TASKS, MEMORY) and pre-fills templates based on detected stack and conventions.
 
 ## Instructions
 
-When the user runs `/session:init`, perform these steps:
-
 ### 1. Check Existing Structure
-
-First, check what already exists:
 
 ```bash
 ls -d .project .beads .context 2>/dev/null
 ```
 
-If `.project/` already exists, ask if the user wants to:
-- Skip (keep existing files)
-- Merge (add missing files only)
-- Replace (overwrite all)
+If `.project/` exists, ask: Skip / Merge / Replace?
 
-### 2. Create .project/ Directory (KNOWLEDGE)
+### 2. Analyze Project (before creating files)
 
-Create the project knowledge folder and all template files:
+Detect stack, framework, and conventions by reading config files.
+
+#### Stack Detection
+
+Check these files (read only what exists):
+
+| File | Indicates |
+|------|-----------|
+| `package.json` | Node.js - read for framework/deps |
+| `Cargo.toml` | Rust |
+| `pyproject.toml` or `requirements.txt` | Python |
+| `go.mod` | Go |
+| `pom.xml` or `build.gradle` | Java |
+| `Gemfile` | Ruby |
+| `composer.json` | PHP |
+
+#### Framework Detection (from package.json dependencies)
+
+| Dependency | Framework |
+|------------|-----------|
+| `next` | Next.js |
+| `react` | React |
+| `vue` | Vue |
+| `express` | Express |
+| `fastify` | Fastify |
+| `@angular/core` | Angular |
+| `svelte` | Svelte |
+
+#### Convention Detection
+
+| File | Convention |
+|------|------------|
+| `tsconfig.json` | TypeScript |
+| `.eslintrc*` | ESLint rules |
+| `.prettierrc*` | Prettier formatting |
+| `jest.config.*` | Jest testing |
+| `vitest.config.*` | Vitest testing |
+| `.github/workflows/` | GitHub Actions CI |
+
+#### Structure Detection
 
 ```bash
-mkdir -p .project/features
+ls -d src lib app tests __tests__ docs .github 2>/dev/null
 ```
 
-#### Create .project/overview.md
+### 3. Create Directories
+
+```bash
+mkdir -p .project/features .context/{sessions,terminal,mcp}
+```
+
+### 4. Generate Pre-filled Templates
+
+Use detected info to create populated templates.
+
+#### .project/overview.md
 
 ```markdown
 # Project Overview
 
 ## What is this?
-[One paragraph: what the project does]
+[Detected: {framework} project with {structure}]
+[TODO: Add 1-2 sentence description]
 
-## Who is it for?
-[Target users]
-
-## Key Features
-- [Feature 1]
-- [Feature 2]
+## Key Structure
+{detected directory layout}
 
 ## Quick Start
-[How to run locally]
+```bash
+{detected from package.json scripts.dev or scripts.start, or common patterns}
+```
 
 ## Current Status
-[Active development / MVP / Production]
+Active development
 ```
 
-#### Create .project/constitution.md
-
-```markdown
-# Constitution
-
-## Principles
-- [Non-negotiable principle 1]
-- [Non-negotiable principle 2]
-
-## Non-Goals
-- [What we will NOT build]
-- [Scope boundaries]
-
-## Constraints
-- [Technical constraints]
-- [Business constraints]
-```
-
-#### Create .project/stack.md
+#### .project/stack.md
 
 ```markdown
 # Tech Stack
 
 ## Core
-- Language: [e.g., TypeScript]
-- Framework: [e.g., Next.js]
-- Database: [e.g., PostgreSQL]
+- Language: {detected language}
+- Framework: {detected framework}
+- Runtime: {Node version from .nvmrc or engines, Python version, etc.}
 
 ## Key Dependencies
-- [Dependency]: [What it's used for]
+{top 5-10 dependencies with brief purpose if detectable}
 
-## Infrastructure
-- Hosting: [e.g., Vercel]
-- CI/CD: [e.g., GitHub Actions]
+## Dev Tools
+- Linting: {eslint/prettier if detected}
+- Testing: {jest/vitest/pytest if detected}
+- CI: {GitHub Actions if .github/workflows exists}
 ```
 
-#### Create .project/conventions.md
+#### .project/conventions.md
 
 ```markdown
 # Conventions
 
 ## Code Style
-- [Style guide reference]
-- [Key patterns]
+{Detected from eslint/prettier config, or "See .eslintrc for rules"}
 
-## Naming
-- Files: [convention]
-- Components: [convention]
-- Functions: [convention]
-
-## Git Workflow
-- Branch naming: [pattern]
-- Commit format: [pattern]
-- PR process: [description]
+## TypeScript
+{If tsconfig.json: "Strict mode enabled" or key settings}
 
 ## Testing
-- Unit tests: [where, how]
-- Integration tests: [where, how]
+- Location: {tests/ or __tests__ or src/**/*.test.*}
+- Framework: {detected test framework}
+
+## Git
+{If .github/workflows: "CI runs on PR"}
 ```
 
-#### Create .project/state.md
+#### .project/constitution.md
+
+```markdown
+# Constitution
+
+## Principles
+- [TODO: Add non-negotiable principles]
+
+## Non-Goals
+- [TODO: What this project will NOT do]
+
+## Constraints
+- [TODO: Technical/business constraints]
+```
+
+#### .project/state.md
 
 ```markdown
 # Current State
 
 ## Active Focus
-[What we're working on now]
+[TODO: What are you working on?]
 
 ## Recent Decisions
-- [Decision]: [Rationale]
+- [TODO: Key decisions made]
 
 ## Blockers
-- [ ] [Unresolved question or issue]
+- [ ] [TODO: Unresolved issues]
 
 ## Next Up
-- [Next task or focus area]
+- [TODO: Upcoming work]
 
 ---
-*Last updated: [date] by init*
+*Initialized: {date}*
 ```
 
-### 3. Create .context/ Directory (MEMORY)
+### 5. Update .gitignore
 
-Create the context management folders:
-
-```bash
-mkdir -p .context/{sessions,terminal,mcp}
+Append if not present:
 ```
-
-These folders will store:
-- `sessions/` - Session summary files (created during /session:start)
-- `terminal/` - Large command outputs (auto-archived by hooks)
-- `mcp/` - Large MCP tool outputs (auto-archived by hooks)
-
-### 4. Update .gitignore
-
-Add `.context/` to `.gitignore` (create if it doesn't exist):
-
-```
-# Session workflow - context management
+# Session workflow
 .context/
 ```
 
-Note: `.project/` should be tracked in git (it's project knowledge).
-Note: `.beads/` tracking is managed by beads itself.
-
-### 5. Initialize beads (TASKS)
-
-Check if beads is already initialized:
+### 6. Initialize beads
 
 ```bash
-ls -d .beads 2>/dev/null
+bd init 2>/dev/null || echo "beads not installed - task tracking disabled"
 ```
 
-If `.beads/` does not exist, initialize it:
-
-```bash
-bd init
-```
-
-If beads CLI is not available, inform the user:
-"beads is not installed. Install it to enable task tracking, or skip this step."
-
-### 6. Report What Was Created
-
-Provide a summary of what was created:
+### 7. Report Results
 
 ```
-Session Workflow initialized!
+Session initialized with auto-detection!
 
-KNOWLEDGE (.project/)
-  - overview.md      # What is this project
-  - constitution.md  # Principles and non-goals
-  - stack.md         # Tech stack and dependencies
-  - conventions.md   # Code style and patterns
-  - state.md         # Current focus and decisions
-  - features/        # Feature specs and plans
+Detected:
+  - Language: {language}
+  - Framework: {framework}
+  - Testing: {test framework}
+  - CI: {GitHub Actions / none}
 
-MEMORY (.context/)
-  - sessions/        # Session summaries
-  - terminal/        # Large command outputs
-  - mcp/             # Large MCP outputs
+Created:
+  .project/
+    overview.md     ← Review and refine
+    stack.md        ← Detected, verify accuracy
+    conventions.md  ← Detected from config files
+    constitution.md ← TODO: Add principles
+    state.md        ← TODO: Set current focus
 
-TASKS (.beads/)
-  - [initialized / already exists / skipped]
+  .context/         ← Session memory (gitignored)
+  .beads/           ← Task tracking
 
-Updated:
-  - .gitignore       # Added .context/
-
-Next steps:
-1. Fill in .project/overview.md with your project description
-2. Run /session:start plan to begin your first session
+Next: Review .project/ files, then /session:start plan
 ```
 
-### 7. Offer to Help Fill Templates
+### 8. Offer Refinement
 
-Ask the user:
-"Would you like me to help fill in the .project/ templates based on your codebase? I can analyze your project and draft initial content for overview.md, stack.md, and conventions.md."
-
-If yes, analyze the project structure and help populate the templates.
+After creating files:
+"I've pre-filled templates based on your codebase. Want me to read any .project/ file so you can refine it?"

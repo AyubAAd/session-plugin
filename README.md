@@ -47,7 +47,7 @@ Or install directly from GitHub:
 ## Quick Start
 
 ```bash
-# Initialize in your project
+# Initialize - auto-detects stack, conventions, structure
 /session:init
 
 # Start a session
@@ -60,11 +60,13 @@ Or install directly from GitHub:
 /session:end
 ```
 
+`/session:init` analyzes your codebase and pre-fills `.project/` templates with detected stack, framework, and conventions. Review and refine the generated files.
+
 ## Commands
 
 | Command | Purpose |
 |---------|---------|
-| `/session:init` | Initialize three-pillar structure |
+| `/session:init` | Analyze codebase and initialize with pre-filled templates |
 | `/session:start <type>` | Start typed session (plan/build/review/fix/document) |
 | `/session:end` | End session, update state, write continuation |
 | `/session:end quick` | Fast close without review |
@@ -225,6 +227,7 @@ See `references/multi-agent.md` for patterns.
 ### 0.2.0
 
 - Context optimization (~70% reduction)
+- **Auto-detection in `/session:init`** - detects stack, framework, conventions
 - Split skills by session type (progressive loading)
 - Lean continuation file format
 - Archive scripts truncate large outputs

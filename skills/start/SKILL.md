@@ -33,8 +33,22 @@ Session type? [plan/build/review/fix/document]
 ### 2. Verify Structure
 
 ```bash
-[ -d .project ] || echo "Run /session:init first"
+ls -d .project 2>/dev/null
 ```
+
+If `.project/` does NOT exist:
+```
+No session structure found.
+
+Run /session:init to:
+- Analyze your codebase (detects stack, framework, conventions)
+- Create .project/ with pre-filled templates
+- Set up .context/ for session memory
+- Initialize beads for task tracking
+
+Then return here with /session:start {type}
+```
+**Stop here** - do not continue without structure.
 
 ### 3. Load Type-Specific Context
 
