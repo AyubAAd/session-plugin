@@ -1,7 +1,7 @@
 {
   "name": "session",
   "version": "0.2.0",
-  "description": "Context-lean session management for AI-assisted development - progressive disclosure, typed sessions, beads integration",
+  "description": "Multi-session AI development with smart context loading - structured workflow, typed sessions, beads integration",
   "author": {
     "name": "gh33k"
   },

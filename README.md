@@ -8,14 +8,14 @@
 │   ███████║███████╗███████║███████║██║╚██████╔╝██║ ╚████║        │
 │   ╚══════╝╚══════╝╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝        │
 │                                                                 │
-│   Context-lean session management for AI-assisted development   │
+│   Multi-session AI development with smart context loading       │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 # Session Workflow Plugin
 
-Orchestrates multi-session work with progressive disclosure - load orientation, pull details on demand.
+Structured workflow for multi-session AI development. Progressive disclosure - load orientation, pull details on demand.
 
 ## Features
 
