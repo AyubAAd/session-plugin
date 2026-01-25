@@ -1,0 +1,14 @@
+{
+  "name": "session",
+  "version": "0.2.0",
+  "description": "Context-lean session management for AI-assisted development - progressive disclosure, typed sessions, beads integration",
+  "author": {
+    "name": "gh33k"
+  },
+  "homepage": "https://github.com/gh33k/session-plugin",
+  "repository": "https://github.com/gh33k/session-plugin",
+  "license": "MIT",
+  "keywords": ["session", "workflow", "context", "beads", "progressive-disclosure"],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}
