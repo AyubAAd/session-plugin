@@ -237,6 +237,12 @@ See `references/multi-agent.md` for patterns.
 - Initial release
 - Basic session workflow
 
+## Support
+
+If this plugin helps your workflow, consider giving it a ⭐
+
+[![Star this repo](https://img.shields.io/github/stars/gh33k/session-plugin?style=social)](https://github.com/gh33k/session-plugin)
+
 ## License
 
 MIT
