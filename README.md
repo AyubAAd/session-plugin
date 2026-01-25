@@ -27,10 +27,17 @@ Orchestrates multi-session work with progressive disclosure - load orientation, 
 
 ## Installation
 
-Copy the `0.2.0` folder to your Claude Code plugins directory:
+Add the plugin marketplace and install:
 
 ```bash
-cp -r 0.2.0 ~/.claude/plugins/session/
+/plugin marketplace add gh33k/session-plugin
+/plugin install session
+```
+
+Or install directly from GitHub:
+
+```bash
+/plugin install gh33k/session-plugin
 ```
 
 ## Quick Start
