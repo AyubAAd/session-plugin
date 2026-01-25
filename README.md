@@ -13,6 +13,10 @@
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+[![Version](https://img.shields.io/github/v/release/gh33k/session-plugin?label=version)](https://github.com/gh33k/session-plugin/releases)
+[![License](https://img.shields.io/github/license/gh33k/session-plugin)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-blue)](https://github.com/gh33k/session-plugin)
+
 # Session Workflow Plugin
 
 Structured workflow for multi-session AI development. Progressive disclosure - load orientation, pull details on demand.
