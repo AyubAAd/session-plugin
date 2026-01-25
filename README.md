@@ -60,7 +60,9 @@ Or install directly from GitHub:
 /session:end
 ```
 
-`/session:init` analyzes your codebase and pre-fills `.project/` templates with detected stack, framework, and conventions. Review and refine the generated files.
+`/session:init` detects your project state:
+- **Existing project**: Analyzes codebase, pre-fills templates with detected stack/conventions
+- **Empty project**: Asks what you're building, generates starter templates, suggests `/session:start plan`
 
 ## Commands
 
@@ -227,7 +229,7 @@ See `references/multi-agent.md` for patterns.
 ### 0.2.0
 
 - Context optimization (~70% reduction)
-- **Auto-detection in `/session:init`** - detects stack, framework, conventions
+- **Smart `/session:init`** - auto-detects existing projects, guides new project setup
 - Split skills by session type (progressive loading)
 - Lean continuation file format
 - Archive scripts truncate large outputs

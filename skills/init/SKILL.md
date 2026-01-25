@@ -1,10 +1,10 @@
 ---
-description: Initialize session workflow structure with auto-detection. Analyzes codebase to pre-fill project templates (stack, conventions, structure).
+description: Initialize session workflow structure with auto-detection. Analyzes existing codebase or guides new project setup. Use for first-time setup in any project.
 ---
 
 # session:init
 
-Initialize session workflow with automatic project analysis. Creates three pillars (KNOWLEDGE, TASKS, MEMORY) and pre-fills templates based on detected stack and conventions.
+Initialize session workflow. For existing projects, analyzes codebase and pre-fills templates. For empty projects, asks what you're building and generates starter templates.
 
 ## Instructions
 
@@ -16,13 +16,79 @@ ls -d .project .beads .context 2>/dev/null
 
 If `.project/` exists, ask: Skip / Merge / Replace?
 
-### 2. Analyze Project (before creating files)
+### 2. Detect Project State
 
-Detect stack, framework, and conventions by reading config files.
+```bash
+ls -A | head -20
+```
+
+**If empty or only has .git:** → Go to [Empty Project Flow](#empty-project-flow)
+**If has files:** → Go to [Existing Project Flow](#existing-project-flow)
+
+---
+
+## Empty Project Flow
+
+### E1. Ask What They're Building
+
+```
+New project detected. What are you building?
+
+1. Web App (frontend with React/Vue/Next.js)
+2. API/Backend (Node/Python/Go/Rust)
+3. CLI Tool
+4. Library/Package
+5. Full-Stack (frontend + backend)
+6. Other (describe it)
+```
+
+### E2. Ask for Project Name and Description
+
+```
+What should we call this project? (short name)
+Brief description? (1-2 sentences)
+```
+
+### E3. Generate Starter Templates
+
+Based on selection, create `.project/` files with suggested stack:
+
+| Type | Suggested Stack |
+|------|-----------------|
+| Web App | TypeScript, React/Next.js, Tailwind, Vitest |
+| API/Backend | TypeScript/Python, Express/FastAPI, Jest/Pytest |
+| CLI Tool | TypeScript/Rust, Commander/Clap |
+| Library | TypeScript, Vitest, tsup for bundling |
+| Full-Stack | TypeScript, Next.js or separate frontend/backend |
+
+Create directories and templates (see [Create Directories](#3-create-directories) and templates below).
+
+### E4. Report and Suggest Plan Session
+
+```
+Project initialized: {name}
+
+Created .project/ with starter templates for {type}.
+Stack suggestion: {suggested stack}
+
+Next step: /session:start plan
+
+In the plan session, you'll:
+- Refine the project scope and architecture
+- Define principles and constraints
+- Break down into initial tasks
+- Set your first focus area
+```
+
+**Stop here for empty projects.**
+
+---
+
+## Existing Project Flow
+
+### 3. Analyze Codebase
 
 #### Stack Detection
-
-Check these files (read only what exists):
 
 | File | Indicates |
 |------|-----------|
@@ -34,7 +100,7 @@ Check these files (read only what exists):
 | `Gemfile` | Ruby |
 | `composer.json` | PHP |
 
-#### Framework Detection (from package.json dependencies)
+#### Framework Detection (from package.json)
 
 | Dependency | Framework |
 |------------|-----------|
@@ -57,19 +123,13 @@ Check these files (read only what exists):
 | `vitest.config.*` | Vitest testing |
 | `.github/workflows/` | GitHub Actions CI |
 
-#### Structure Detection
-
-```bash
-ls -d src lib app tests __tests__ docs .github 2>/dev/null
-```
-
-### 3. Create Directories
+### 4. Create Directories
 
 ```bash
 mkdir -p .project/features .context/{sessions,terminal,mcp}
 ```
 
-### 4. Generate Pre-filled Templates
+### 5. Generate Pre-filled Templates
 
 Use detected info to create populated templates.
 
@@ -168,7 +228,7 @@ Active development
 *Initialized: {date}*
 ```
 
-### 5. Update .gitignore
+### 6. Update .gitignore
 
 Append if not present:
 ```
@@ -176,16 +236,16 @@ Append if not present:
 .context/
 ```
 
-### 6. Initialize beads
+### 7. Initialize beads
 
 ```bash
 bd init 2>/dev/null || echo "beads not installed - task tracking disabled"
 ```
 
-### 7. Report Results
+### 8. Report Results
 
 ```
-Session initialized with auto-detection!
+Session initialized!
 
 Detected:
   - Language: {language}
@@ -193,21 +253,52 @@ Detected:
   - Testing: {test framework}
   - CI: {GitHub Actions / none}
 
-Created:
-  .project/
-    overview.md     ← Review and refine
-    stack.md        ← Detected, verify accuracy
-    conventions.md  ← Detected from config files
-    constitution.md ← TODO: Add principles
-    state.md        ← TODO: Set current focus
-
-  .context/         ← Session memory (gitignored)
-  .beads/           ← Task tracking
+Created .project/ with pre-filled templates.
+Created .context/ for session memory.
+Initialized .beads/ for task tracking.
 
 Next: Review .project/ files, then /session:start plan
 ```
 
-### 8. Offer Refinement
+---
 
-After creating files:
-"I've pre-filled templates based on your codebase. Want me to read any .project/ file so you can refine it?"
+## Shared Templates (Both Flows)
+
+Both flows create the same file structure. For empty projects, use suggested values. For existing projects, use detected values.
+
+#### .project/constitution.md (always needs user input)
+
+```markdown
+# Constitution
+
+## Principles
+- [Define in plan session]
+
+## Non-Goals
+- [Define in plan session]
+
+## Constraints
+- [Define in plan session]
+```
+
+#### .project/state.md
+
+```markdown
+# Current State
+
+## Active Focus
+{For empty: "Project setup and planning"}
+{For existing: "[TODO: What are you working on?]"}
+
+## Recent Decisions
+- Initialized session workflow
+
+## Blockers
+- [ ] None yet
+
+## Next Up
+- Complete project planning
+
+---
+*Initialized: {date}*
+```
